@@ -21,7 +21,7 @@ R-squared is a better measurement than RSME, b/c the value of RMSE depends on th
 ![image](https://user-images.githubusercontent.com/59746522/139966392-087f9fff-24cf-4367-9784-284d2d7f6c4a.jpeg)
 * Normal distribution of residuals 
 * Homoscedasticity: residuals have constant variance
-  * Not constant variance arises in the presence of outliers 
+  * No constant variance arises in the presence of outliers 
 
 * No or little multicollinearity in multiregression problem 
   * Can be detectede using:
@@ -40,3 +40,5 @@ Is the beta coefficient explain the variance in the data?
 * H1: b1 != 0 or b1 > 0 
 
 Use t-test - see my demo in python for more details.
+
+[Reference](https://www.analyticsvidhya.com/blog/2021/10/everything-you-need-to-know-about-linear-regression/)
