@@ -60,6 +60,44 @@ Here, the Ecpected is the expected value for a class in a child node (not actual
 
 Take the sum of Chi-Square values for all the classes in a node to calculate the Chi-Square for that node, the higher the Chi-Square for that node, the bigger the difference between parent and child nodes. **i.e. higher the homogeneity**
 
+## Outliers 
 
+All tree based methods are robust to outliers 
+
+Most likely outliers will have a negligible effect b/c the nodes are determined based on the sample proportions in each split region, not their absolute values. (might affect countinuous target variable) 
+
+
+## Purning/ Hyperparameter turning 
+
+Decision Tress are prone to over-fitting, a DT will always overfit the trainning data if we allow it to grow to its max depth.
+
+* [Parameters in DT classifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) 
+ * cirterion (function to measure the quality of a split - default Gini)
+ * max_depth 
+ * min_sample_split: the minimum num of samples required to split an internal node 
+ * min_sample_leaf: the minimum num of samples required to be at a leaf node 
+ * max_features: The num of features to consider when looking for the best split 
+ * max_leaf_nodes
+ * min_impurity_decrease: a node will be split if this split induces a decrease of the impurity greater than this value
+ * ccp_alpha: Minimal cost-complexity purning 
+   * ![image](https://user-images.githubusercontent.com/59746522/140243062-e5416259-da79-4cdb-b3e4-ecc293d65aec.png)
+   * R(T) — Total training error of leaf nodes
+   * |T| — The number of leaf nodes
+   * α — complexity parameter(a whole number)
+     * As alpha increases, more of the tree is pruned, which increases the total impurity of its leaves.
+     * If we only try to reduce the training error R(T), it will lead to relatively larger trees (more leaf nodes), resulting in overfitting.
+
+
+
+Pruning is a technique that is used to reduce overfitting. Pruning also simplifies a decision tree by removing the weakest rules. Pruning is often distinguished into:
+
+* Pre-pruning (early stopping) stops the tree before it has completed classifying the training set,
+* Post-pruning allows the tree to classify the training set perfectly and then prunes the tree.
+
+### Purne DT with Optimal Max_depth (with grid search) 
+
+![image](https://user-images.githubusercontent.com/59746522/140242268-0039b57b-e8d9-45ac-88d9-c83738fba296.png)
+
+[reference_code](https://towardsdatascience.com/build-better-decision-trees-with-pruning-8f467e73b107)
 
 
