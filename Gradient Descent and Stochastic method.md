@@ -1,3 +1,11 @@
+### Gradient descnet In laymen's term 
+To draw an analogy, imagine a pit in the shape of U and you are standing at the top most of point in the pit and your objective is to reach the bottom of the pit. There is a catch, you can only take discrete number of steps to reach the bottom. If you decide to take one step at a time you would eventually reach the bottom of the pit but this would take a longer time.
+
+If you choose to jump over steps and decide to cover more than one step at a time you would reach sooner but, there is a chance that you could overshoot the bottom of the pit and end up at the other side of the pit or only closer to the bottom of the pit and not exactly at the bottom.
+
+In the gradient descent algorithm, the number of steps you take is the learning rate. This decides on how fast the algorithm converges to the minima. The smaller the learning rate, the more closer you are to the minima but the more time it takes to reach the minima, a larger learning rate converges sooner but there is a chance that you could end up in a value slightly far from the minima.
+
+
 ## Three variants of gradient descent algorithm
 
 * **Batch gradient descent (BGD):** calculate the error for each example in the training dataset, but only updates the model after all training examples have been evaluated.
